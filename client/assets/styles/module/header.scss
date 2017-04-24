@@ -1,0 +1,66 @@
+/*
+* @Author: accord
+* @Date:   2017-04-20 17:38:30
+* @Last Modified by:   accord
+* @Last Modified time: 2017-04-21 10:25:08
+* @FileName: header.scss 
+*/
+
+.header {
+    display: flex;
+    padding: 0.5rem;
+    > .brand {
+        margin: 0 1rem 0 0;
+        font: italic ($header-height* .625) sans-serif;
+        line-height: $header-height;
+        > a {
+            color: $brand-color;
+            &:hover {
+                color: $brand-hover-color;
+            }
+        }
+    }
+    > .toolbar {
+        display: flex;
+        flex: 1;
+        > .list {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            > .item {
+                position: relative;
+                > a {
+                    display: block;
+                    padding: 0 .625rem;
+                    color: $menu-item-color;
+                    font-size: ($header-height * .375);
+                    line-height: $header-height;
+                    > img {
+                        max-width: ($header-height / 2);
+                        max-height: ($header-height / 2);
+                        margin-top: -.25rem;
+                        background: $menu-image-background;
+                        border: $menu-image-border;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            &:last-child {
+                margin-left: auto;
+                > .item {
+                    > .list {
+                        right: 0;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 568px) {
+    .header > .toolbar > .list:first-child {
+        display: none;
+    }
+}
