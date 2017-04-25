@@ -17,7 +17,7 @@ axios.interceptors.request.use((config) => {
 });
 
 axios.interceptors.response.use((res) => {
-    if (res.data.code !== '200') {
+    if (res.status !== 200) {
         return Promise.reject(res);
     }
     return res;

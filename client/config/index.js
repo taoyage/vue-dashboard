@@ -2,4 +2,6 @@
 
 import axios from './http.js';
 
-export { axios };
+export {
+    axios
+};

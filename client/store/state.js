@@ -10,7 +10,7 @@ const state = {
          * 站点名称
          * @type {String}
          */
-        name: 'accord'
+        name: '国泰君安证券'
     },
     /**
      * 侧边导航栏

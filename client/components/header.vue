@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <h1 class="brand">
-            <a href="">accord</a>
+            <router-link to="/">{{ header.name }}</router-link>
         </h1>
         <nav class="toolbar">
             <ul class="list">
@@ -25,7 +25,14 @@
     </header>
 </template>
 <script>
-</script>
-<style lang="scss" scope>
+    import {
+        mapGetters
+    } from 'vuex';
 
-</style>
+    export default {
+        name: 'header',
+        computed: mapGetters({
+            header: 'header'
+        })
+    };
+</script>
