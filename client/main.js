@@ -5,8 +5,8 @@ import ElementUI from 'element-ui';
 
 import App from './App';
 import router from './router';
-import store from 'store/index';
-import plugins from 'plugins/index';
+import store from 'libraries/store/index';
+import plugins from 'libraries/plugins/index';
 
 /* import styles */
 import 'element-ui/lib/theme-default/index.css';

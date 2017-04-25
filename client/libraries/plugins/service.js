@@ -1,6 +1,6 @@
 'use strict';
 
-import { ValuationService } from 'service/index';
+import { ValuationService } from '../service/index';
 
 export default Vue => {
     const services = {

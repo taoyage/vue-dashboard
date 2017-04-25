@@ -2,7 +2,7 @@
     <ul class="list">
         <template v-for="item in items">
             <li class="item">
-                <a href="">{{item.text}}</a>
+                <a href="" :class="`${item.icon}`">{{item.text}}</a>
                 <ul class="list" v-if="item.children">
                     <template v-for="sub in item.children">
                         <li class="item">

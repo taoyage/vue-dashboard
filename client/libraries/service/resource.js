@@ -1,6 +1,6 @@
 'use strict';
 
-import { axios } from 'config/index';
+import { axios } from '../config/index';
 
 function Resource(base, otherActions) {
     this.base = base;

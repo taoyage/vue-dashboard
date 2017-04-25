@@ -16,7 +16,6 @@
             }
             > .item {
                 position: relative;
-                margin-left: 2rem;
                 > a {
                     display: block;
                     color: $menu-item-color;
@@ -24,6 +23,11 @@
                     line-height: $sidebar-item-height;
                     white-space: nowrap;
                     overflow: hidden;
+                    > i,
+                    &::before {
+                        padding: 0 (($sidebar-min-width - 1rem) / 2);
+                        font-size: 1rem;
+                    }
                 }
                 > .list {
                     display: none;
