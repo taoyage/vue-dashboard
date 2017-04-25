@@ -1,7 +1,7 @@
 <template>
     <aside class="sidebar">
         <nav class="menu">
-            <sidebar-menu :items="sidebar.menus"></sidebar-menu>
+            <sidebar-menu :items="sidebar.menus" active-class></sidebar-menu>
         </nav>
         <footer class="footer">
             <a class="toggle icon-before icon-circle-left" title="Toggle navigation menu"></a>

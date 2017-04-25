@@ -1,18 +1,28 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import layout from 'components/layout';
-import valuationProductsDetail from 'views/valuation/valuation_products_detail';
 Vue.use(Router);
 
 export default new Router({
     routes: [{
-        path: '/swap',
+        path: '/login',
+        name: 'login',
+        component: resolve => require.ensure([], () => resolve(require('views/login/login')), 'login')
+    }, {
+        path: '/',
         name: 'layout',
         component: layout,
         children: [{
-            path: '/',
-            name: 'valuationProductsDetail',
-            component: valuationProductsDetail
+            path: '',
+            redirect: '/valuation'
+        }, {
+            path: '/valuation',
+            name: 'valuation',
+            component: resolve => require.ensure([], () => resolve(require('views/valuation/valuation')), 'valuation')
+        }, {
+            path: '/products',
+            name: 'products',
+            component: resolve => require.ensure([], () => resolve(require('views/contract/products')), 'products')
         }]
     }]
 });

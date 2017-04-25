@@ -31,9 +31,9 @@ const state = {
         }, {
             text: '互换合约管理',
             icon: 'el-icon-document',
-            name: 'swap',
+            name: 'products',
             children: [
-                { text: '互换产品列表', name: 'swap' },
+                { text: '互换产品列表', name: 'products' },
                 { text: '互换合约录入', name: 'entry' }
             ]
         }, {

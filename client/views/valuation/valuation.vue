@@ -32,7 +32,7 @@
             </el-table-column>
         </el-table>
         <!-- 表格 end -->
-        <el-pagination :total="total" :page-size="size" :current-page="page" :page-sizes="[1, 30, 50]" layout="total, sizes, prev, pager, next" @size-change="handlePageSizeChange" @current-change="handleCurrentPageChange"></el-pagination>
+      <!--   <el-pagination :total="total" :page-size="size" :current-page="page" :page-sizes="[1, 30, 50]" layout="total, sizes, prev, pager, next" @size-change="handlePageSizeChange" @current-change="handleCurrentPageChange"></el-pagination> -->
     </div>
 </template>
 <script>
