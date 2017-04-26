@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <p>关于我</p>
+        <p>陶雅阁</p>
+        <p>只是一个传说</p>
+    </div>
+</template>
+<script>
+</script>

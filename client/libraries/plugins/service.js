@@ -1,10 +1,20 @@
 'use strict';
 
-import { ValuationService } from '../service/index';
+import {
+    ValuationService,
+    ContractService,
+    MarginService,
+    PositionService,
+    SettlementService
+} from '../service/index';
 
 export default Vue => {
     const services = {
-        Valuation: ValuationService
+        Valuation: ValuationService,
+        Contract: ContractService,
+        Margin: MarginService,
+        Position: PositionService,
+        Settlement: SettlementService
     };
 
     //  mount the service to Vue

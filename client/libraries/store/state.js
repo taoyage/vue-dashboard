@@ -18,6 +18,11 @@ const state = {
      */
     sidebar: {
         /**
+         * 关于我
+         * @type {String}
+         */
+        copyright: '陶雅阁',
+        /**
          * 侧边栏菜单
          * @type {Array}
          */

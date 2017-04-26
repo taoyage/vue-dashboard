@@ -4,14 +4,15 @@
             <sidebar-menu :items="sidebar.menus" active-class></sidebar-menu>
         </nav>
         <footer class="footer">
-            <a class="toggle icon-before icon-circle-left" title="Toggle navigation menu"></a>
-            <a class="copyright">fsdafaf</a>
+            <a class="toggle el-icon-arrow-left" title="Toggle navigation menu" @click="toggleCollapse"></a>
+            <router-link class="copyright" :to="{name: 'about'}" :title="`About${sidebar.copyright}`">&copy; {{sidebar.copyright}}</router-link>
         </footer>
     </aside>
 </template>
 <script>
     import {
-        mapGetters
+        mapGetters,
+        mapActions
     } from 'vuex';
 
     import Menu from './menu';
@@ -23,6 +24,11 @@
         },
         computed: mapGetters({
             sidebar: 'sidebar'
-        })
+        }),
+        methods: {
+            ...mapActions({
+                toggleCollapse: 'toggleSidebarCollapse'
+            })
+        }
     };
 </script>

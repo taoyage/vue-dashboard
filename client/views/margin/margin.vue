@@ -7,14 +7,17 @@
             </form>
         </div>
         <!-- 表格 -->
-        <el-table :data="contract" style="width: 100%">
+        <el-table :data="margin" style="width: 100%">
             <el-table-column prop="transaction_id" label="交易编号">
             </el-table-column>
             <el-table-column prop="customer" label="姓名">
             </el-table-column>
-            <el-table-column prop="client_init_principal" label="名义本金">
+            <el-table-column prop="bonds_amount" label="保证金金额">
             </el-table-column>
-            <el-table-column prop="product_status" label="状态">
+            <el-table-column label="操作（流水记录）" width="150">
+                <template scope="scope">
+                    <el-button type="text" size="small">查看</el-button>
+                </template>
             </el-table-column>
         </el-table>
         <!-- 表格 end -->
@@ -22,12 +25,12 @@
 </template>
 <script>
     export default {
-        name: 'products',
+        name: 'margin',
         data() {
             return {
                 total: 0,
                 search: '',
-                contract: []
+                margin: []
             };
         },
         created() {
@@ -35,10 +38,10 @@
         },
         methods: {
             initdata() {
-                this.$services.Contract.get('product')
+                this.$services.Contract.get('bonds')
                     .then(res => {
-                        this.total = res.data.result.length;
-                        this.contract = res.data.result;
+                        this.total = res.data.result.bonds_flow.length;
+                        this.margin = res.data.result.bonds_flow;
                     })
                     .catch(err => {
                         console.error(err);
