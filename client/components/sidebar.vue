@@ -1,5 +1,5 @@
 <template>
-    <aside class="sidebar">
+    <aside class="sidebar" :class="{ collapse: sidebar.collapse }">
         <nav class="menu">
             <sidebar-menu :items="sidebar.menus" active-class></sidebar-menu>
         </nav>
@@ -14,7 +14,7 @@
         mapGetters,
         mapActions
     } from 'vuex';
-
+    
     import Menu from './menu';
 
     export default {

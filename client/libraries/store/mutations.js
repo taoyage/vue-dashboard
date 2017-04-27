@@ -1,5 +1,12 @@
 'use strict';
 
+import { storage } from '../config/index';
+
+/**
+ * 切换侧边栏展开收起
+ * @param  {Object} state Vuex
+ */
 export const TOGGLE_SIDEBAR_COLLAPSE = state => {
-    console.log(111);
+    state.sidebar.collapse = !state.sidebar.collapse;
+    storage.set('sidebar_collapse', state.sidebar.collapse);
 };

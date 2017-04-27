@@ -1,9 +1,8 @@
 'use strict';
 
-// import {
-//     ValuationService,
-//     ContractService
-// } from '../service/index';
+import {
+    TokenService
+} from '../service/index';
 
 // /**
 //  * 获取盯市产品详情
@@ -27,8 +26,20 @@
 //         });
 // };
 
+/**
+ * 创建新的客户端token
+ * @param  {String} options.username 用户名
+ * @param  {String} options.password 密码
+ * @return {[type]}                  [description]
+ */
 export const createToken = ({ commit }, { username, password }) => {
-    console.log(username);
+    return TokenService.post({
+            username: username.trim(),
+            password: password.trim()
+        })
+        .then(res => {
+
+        });
 };
 
 export const toggleSidebarCollapse = ({ commit }) => {

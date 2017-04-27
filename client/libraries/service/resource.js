@@ -16,6 +16,10 @@ Resource.prototype = {
             url += `/${id}`;
         }
         return axios.get(url, options);
+    },
+    post(options) {
+        const url = `/${this.base}`;
+        return axios.post(url, options);
     }
 };
 

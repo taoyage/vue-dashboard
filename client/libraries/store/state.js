@@ -1,4 +1,5 @@
 'use strict';
+import { storage } from '../config/index';
 
 const state = {
     /**
@@ -22,6 +23,13 @@ const state = {
          * @type {String}
          */
         copyright: '陶雅阁',
+
+        /**
+         * 是否收起侧边栏
+         * @type {Boolean}
+         */
+        collapse: storage.get('sidebar_collapse'),
+
         /**
          * 侧边栏菜单
          * @type {Array}
