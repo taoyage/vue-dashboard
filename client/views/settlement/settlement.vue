@@ -10,7 +10,7 @@
         <el-table :data="settlement" style="width: 100%">
             <el-table-column prop="transaction_id" label="交易编号" width="100">
             </el-table-column>
-            <el-table-column prop="customer" label="姓名" width="100">
+            <el-table-column prop="customer" label="姓名">
             </el-table-column>
             <el-table-column prop="start_date" label="交易起始日" width="120">
             </el-table-column>
