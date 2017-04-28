@@ -39,9 +39,9 @@
                     required: true,
                     message: '请输入密码'
                 }, {
-                    min: 6,
+                    min: 3,
                     max: 16,
-                    message: '长度再6到16个字符'
+                    message: '长度再3到16个字符'
                 }]
             };
             return {
@@ -62,7 +62,10 @@
 
                         this.$store.dispatch('createToken', this.model)
                             .then(token => {
-
+                                console.log(11);
+                            })
+                            .catch(err => {
+                                console.log(err);
                             });
                     }
                 });

@@ -38,7 +38,7 @@ export const createToken = ({ commit }, { username, password }) => {
             password: password.trim()
         })
         .then(res => {
-
+            console.log(1);
         });
 };
 

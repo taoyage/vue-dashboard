@@ -1,4 +1,4 @@
-# bct-app
+# vue-swap
 
 > A Vue.js project
 

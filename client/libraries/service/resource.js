@@ -19,6 +19,7 @@ Resource.prototype = {
     },
     post(options) {
         const url = `/${this.base}`;
+        options = JSON.stringify(options);
         return axios.post(url, options);
     }
 };
